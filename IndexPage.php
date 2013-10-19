@@ -27,7 +27,7 @@
 		<div id="main">
 		
 			<div id="container">
-				<div id="advertise">
+				<div id="advertise" class="greyBack">
 					<h1>Come on and slam with pIE pROJECT sIMULATOR!!</h1>
 					<ul>
 						<li>Manage your own projects.</li>
@@ -37,8 +37,8 @@
 					</ul>
 				</div>
 				
-				<div id="login">
-					<p><a>Login</a> | <a>Register</a></p>
+				<div id="login" class="greyBack">
+					<p>Login | <a href="register.php">Register</a></p>
 					<h1>Let's get in there!</h1>
 					
 					<form action="index.php" method="post">
