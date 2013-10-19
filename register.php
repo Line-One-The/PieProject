@@ -27,37 +27,6 @@
 		<div id="main">
 		
 			<div id="container">
-				<div id="title" class="greyBack">
-					<h1>"$projectname"</h1>
-				</div>
-			
-				<div id="newProject" class="greyBack">
-					<p><a href="addMilestone.php">Create milestone</a></p>
-				</div>
-				
-				<div id="projects" class="greyBack">
-					<h1>Current Deadlines</h1>
-					
-					<table>
-						<tr><td><h2><a href="login.html">Fix the leak.</a></h2></td></tr>
-						<tr class="subtitle"><td>this is subtitle text...</td></tr>
-					</table>
-					
-
-					
-				</div>
-				
-			</div>
-		</div>
-		
-        
-    </body>
-</html>
-
-	
-		<div id="main">
-		
-			<div id="container">
 				<div id="advertise" class="greyBack">
 					<h1>Come on and slam with pIE pROJECT sIMULATOR!!</h1>
 					<ul>
@@ -69,7 +38,7 @@
 				</div>
 				
 				<div id="login" class="greyBack">
-					<p><a href="index.php">Login</a> | Register</p>
+					<p><a href="login.php">Login</a> | Register</p>
 					<h1>Birth an account!</h1>
 					
 					<form action="createUser.php" method="post">
