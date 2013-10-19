@@ -38,7 +38,7 @@
 				</div>
 				
 				<div id="login" class="greyBack">
-					<p><a href="login.php">Login</a> | Register</p>
+					<p><a href="index.php">Login</a> | Register</p>
 					<h1>Birth an account!</h1>
 					
 					<form action="createUser.php" method="post">
