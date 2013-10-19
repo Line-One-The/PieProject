@@ -11,7 +11,7 @@ $description = $_POST['description'];
 
 $numUsers = $_POST['total'];
 
-$userId = 11;//$_SESSION['userid'];
+$userId = $_SESSION['userid'];
 
 $usersToAdd = array();
 $userIDs = array();
@@ -31,6 +31,6 @@ for ($i = 0; $i < $numUsers; $i++) {
 	mysqli_query($dbConnect, "INSERT INTO `user-project` (u_id, p_id) VALUES ('".$r[0]."','".$projectID."')");
 }
 mysqli_query($dbConnect,"INSERT INTO `user-project` (u_id, p_id) VALUES ('".$userId."'".$projectID."')");
-echo "Project created";
+header('Location: project.php?pID=' . $projectID);
 }
 ?>
