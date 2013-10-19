@@ -15,6 +15,11 @@
 		
 		<script>
 			var number = 1
+			
+			function getNumberOfUsers()
+			{
+				return number;
+			}
 			function addNewMemberLine()
 			{
 				number = number + 1;
@@ -50,9 +55,9 @@
         <![endif]-->
 
 	
-		<div id="header" class="greyBack">
-			<h1> <img src="images/ProjectPie.png" /> </h1>
-		</div>
+		<?php
+			include "header.php";
+		?>
 	
 		<div id="main">
 		
@@ -60,7 +65,7 @@
 				<div id="login" class="greyBack">
 					<h1>Start a new project!</h1>
 					
-					<form action="createUser.php" method="post" id="form">
+					<form action="createUser.php?num="+getNumberOfUsers() method="post" id="form">
 						Project Name<br>
 						<input class="styledButton" type="text" name="name"><br><br>
 						Description<br>
