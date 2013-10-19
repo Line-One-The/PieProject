@@ -1,4 +1,23 @@
+<?php 
+	include 'ProfileFuncs.php';
+	session_start();
+	
+	include 'db.php';
+	
+	$uID = $_SESSION['userid'];
+	$result = mysqli_query($dbConnect, "SELECT name FROM `$users_table` WHERE id = $uID;");
+	if(!$result) {
+		return;
+	}
+	
+	$row = mysqli_fetch_array($result);
+	if(!$row) {
+		return;
+	}
+	
+	$uName = $row['name'];
 
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -21,32 +40,28 @@
         <![endif]-->
 
 	
-		<?php
-			include "header.php";
-		?>
+		<div id="header">
+			<h1> <img src="images/ProjectPie.png" /> </h1>
+		</div>
 	
 		<div id="main">
 		
 			<div id="container">
 				<div id="title" class="greyBack">
-					<h1>"Welcome ".$username."!"</h1>
+					<?php
+					
+						echo "<h1>Welcome $uName!</h1>";
+					
+					?>
 				</div>
 			
 				<div id="newProject" class="greyBack">
 					<p><a href="login.html">Create new project</a></p>
 				</div>
 				
-				<div id="projects" class="greyBack">
-					<h1>Current Projects</h1>
-					
-					<table>
-						<tr><td><h2><a href="login.html">Save the world</a></h2></td></tr>
-						<tr class="subtitle"><td>this is subtitle text...</td></tr>
-					</table>
-					
-
-					
-				</div>
+				<?php
+					printProjects();
+				?>
 				
 			</div>
 		</div>
