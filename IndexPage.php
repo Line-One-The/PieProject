@@ -28,12 +28,13 @@
 		
 			<div id="container">
 				<div id="advertise" class="greyBack">
-					<h1>Come on and slam with pIE pROJECT sIMULATOR!!</h1>
+					<h1>Come on and slam with Pie Project!</h1>
 					<ul>
 						<li>Manage your own projects.</li>
 						<li>Collaborate with others.</li>
 						<li>Monitor and record your progress.</li>
 						<li>Set up deadlines and milestones.</li>
+						<li>Recieve SMS notifications of deadlines.</li>
 					</ul>
 				</div>
 				
@@ -53,6 +54,12 @@
 				</div>
 			</div>
 		</div>
+		
+		<?php
+			include 'footer.php';
+		?>
+		
+
 		
         
     </body>
