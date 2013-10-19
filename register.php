@@ -47,7 +47,7 @@
 						Password<br>
 						<input class="styledButton" type="password" name="pass"><br><br>
 						Confirm Password<br>
-						<input class="styledButton" type="password" name="confrim"><br><br>
+						<input class="styledButton" type="password" name="confirm"><br><br>
 						Email<br>
 						<input class="styledButton" type="text" name="email"><br><br>
 						Phone Number (#-###-###-####)<br>

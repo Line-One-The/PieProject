@@ -12,7 +12,7 @@
 		include 'db.php';
 		
 		$username = mysql_escape_string($_POST["username"]);
-		$password = $_POST["password"];
+		$password = md5($_POST["password"]);
 		
 		$result = mysqli_query($dbConnect, "SELECT id, PASSWORD FROM `$users_table` WHERE name = '$username'");
 		if(!$result) {

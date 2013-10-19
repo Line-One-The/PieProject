@@ -22,7 +22,7 @@ if($password == $confirm){
  	if(mysqli_num_rows(mysqli_query($dbConnect, $select))<1){
 	$query = "INSERT INTO users (name, password, email, phone) VALUES ('".$user."','". $password."','".$email."','".$phone."')";
 		mysqli_query($dbConnect, $query);
-		echo "User created";
+		header('Location: index.php');
 	}
 	else{
 		echo "Username is already in the database. Please go back and try again.";
