@@ -15,6 +15,7 @@ body {
 }
 
 div {
+padding-left: 12px;
 }
 
 #main{
@@ -62,6 +63,7 @@ div {
 	text-align: right;
 }
 
+
 div.greyBack {
 	background-color: #f2f2f2;
 	border-bottom-left-radius: 3px;
@@ -86,7 +88,7 @@ a:link, a:visited, a:active, a:hover{
 }
 
 
-input.styledButton {
+.styledButton {
 	-webkit-box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 3px 0px inset, rgba(255, 255, 255, 0.0745098) 0px 1px 0px 0px;
 	background-color: rgb(250, 255, 189);
 	border-bottom-left-radius: 3px;
