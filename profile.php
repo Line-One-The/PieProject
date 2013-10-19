@@ -1,4 +1,7 @@
-
+<?php 
+include 'ProfileFuncs.php';
+session_start();
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -36,15 +39,9 @@
 					<p><a href="login.html">Create new project</a></p>
 				</div>
 				
-				<div id="projects" class="greyBack">
-					<h1>Current Projects</h1>
-					
-					<table>
-						<tr><td><h2><a href="login.html">Save the world</a></h2></td></tr>
-						<tr class="subtitle"><td>this is subtitle text...</td></tr>
-					</table>
-					
-				</div>
+				<?php
+					printProjects();
+				?>
 				
 			</div>
 		</div>
