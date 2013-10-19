@@ -5,7 +5,7 @@
 		header('Location: profile.php');
 	}
 	else if(empty($_POST["username"]) || empty($_POST["password"])) {
-		include 'index.html';
+		include 'IndexPage.php';
 		return;
 	}
 	else {
@@ -16,19 +16,19 @@
 		
 		$result = mysqli_query($dbConnect, "SELECT id, PASSWORD FROM `$users_table` WHERE name = '$username'");
 		if(!$result) {
-			include 'index.html';
+			include 'IndexPage.php';
 			return;
 		}
 		
 		$row = mysqli_fetch_array($result);
 		if(!$row) {
-			include 'index.html';
+			include 'IndexPage.php';
 			return;
 		}
 		
 		$ePwrd = $row['PASSWORD'];
 		if($password != $ePwrd) {
-			include 'index.html';
+			include 'IndexPage.php';
 			return;
 		}
 		

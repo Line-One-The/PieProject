@@ -40,9 +40,9 @@
         <![endif]-->
 
 	
-		<div id="header">
-			<h1> <img src="images/ProjectPie.png" /> </h1>
-		</div>
+		<?php 
+			include 'header.php';
+		?>
 	
 		<div id="main">
 		

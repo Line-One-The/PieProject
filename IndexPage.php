@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -21,9 +20,9 @@
         <![endif]-->
 
 	
-		<div id="header">
-			<h1> <img src="images/ProjectPie.png" /> </h1>
-		</div>
+		<?php
+			include 'header.php';
+		?>
 	
 		<div id="main">
 		
@@ -42,7 +41,7 @@
 					<p><a>Login</a> | <a>Register</a></p>
 					<h1>Let's get in there!</h1>
 					
-					<form action="login.php" method="post">
+					<form action="index.php" method="post">
 						Username<br>
 						<input class="styledButton" type="text" name="username"><br><br>
 						Password<br>
