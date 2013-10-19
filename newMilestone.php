@@ -28,8 +28,8 @@
 		<div id="main">
 		
 			<div id="container">
-				<div id="creation" class="greyBack">
-					<h1>Start a new project!</h1>
+				<div id="advertise" class="greyBack">
+					<h1>Add a new milestone!</h1>
 					
 					<form action="AddMilestone.php" method="post">
 						Milestone Name<br>
