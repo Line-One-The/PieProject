@@ -4,12 +4,11 @@
 
 
 html {
-	margin: 0 30px;
+	margin: 0 50px;
 	padding: 0;
 }
 
 body {
-	display: blocks;
 	font-size: 15px;
 	font-family: Helvetica, Arial, sans-serif;
 	background: black url('../images/stripes.png') repeat;
@@ -19,16 +18,16 @@ div {
 }
 
 #main{
-	width: 100%;
-	margin-top: 20px;
+	margin-top: 20px
 }
 
 #container {
-	width: 90%;
 	height: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
+	background-color: #f2f2f2;
+	
 }
 
 #header {
@@ -45,6 +44,7 @@ div {
 #login {
 	float: right;
 	right: 120;
+	padding: 0 20px;
 }
 
 #title {
@@ -59,10 +59,16 @@ div {
 #newProject {
 	float: right;
 	padding: 0 4px;
+	text-align: right;
 }
 
 div.greyBack {
 	background-color: #f2f2f2;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	box-shadow: 1px 2px 0 #888888;
 }
 
 .subtitle {
