@@ -31,11 +31,14 @@
 				<div id="advertise" class="greyBack">
 					<h1>Add a new milestone!</h1>
 					
-					<form action="AddMilestone.php" method="post">
+					<?php
+						$pID = $_GET['pID'];
+						echo "<form action='AddMilestone.php?pID=$pID' method='post'>";
+					?>
 						Milestone Name<br>
 						<input class="styledButton" type="text" name="name"><br><br>
 						Description<br>
-						<input class="styledButton" type="textarea" name="description"><br><br>
+						<textarea row="4" cols="50" class="styledButton" name="desc"></textarea><br><br>
 						<input type="submit" value="submit">
 					</form>
 					

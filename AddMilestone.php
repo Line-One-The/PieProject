@@ -6,8 +6,8 @@ $mName = $_POST['name'];
 $mDesc = $_POST['desc'];
 
 include 'db.php';
-mysqli_execute("INTERT INTO `$milestones_table` VALUES($mName, $mDesc);");
+mysqli_query($dbConnect, "INTERT INTO `$milestones_table`(name, description, p_id) VALUES('$mName', '$mDesc', $pID);");
 
-header("project.php?pID=$pID");
+header("Location: project.php?pID=$pID");
 
 ?>

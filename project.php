@@ -31,7 +31,7 @@
 			$mName = $row['name'];
 			$mDesc = $row['description'];
 			
-			include 'Milestone.php';
+			include 'MilestoneDiv.php';
 		}
 	}
 ?>
@@ -72,7 +72,9 @@
 				</div>
 			
 				<div id="newProject" class="greyBack">
-					<p><a href="addMilestone.php">Create milestone</a></p>
+					<?php
+						echo "<p><a href='newMilestone.php?pID=$pID'>Create milestone</a></p>";
+					?>
 				</div>
 				
 				<div id="projects" class="greyBack">
