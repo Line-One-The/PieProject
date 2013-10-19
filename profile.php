@@ -29,18 +29,18 @@
 		
 			<div id="container">
 				<div id="title" class="greyBack">
-					<h1>"$projectname"</h1>
+					<h1>"Welcome ".$username."!"</h1>
 				</div>
 			
 				<div id="newProject" class="greyBack">
-					<p><a href="addMilestone.php">Create milestone</a></p>
+					<p><a href="login.html">Create new project</a></p>
 				</div>
 				
 				<div id="projects" class="greyBack">
-					<h1>Current Deadlines</h1>
+					<h1>Current Projects</h1>
 					
 					<table>
-						<tr><td><h2><a href="login.html">Fix the leak.</a></h2></td></tr>
+						<tr><td><h2><a href="login.html">Save the world</a></h2></td></tr>
 						<tr class="subtitle"><td>this is subtitle text...</td></tr>
 					</table>
 					
