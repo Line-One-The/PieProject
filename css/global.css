@@ -1,0 +1,69 @@
+/* =====================
+   Ben was here 
+   ===================== */
+
+
+html {
+	margin: 0 30px;
+	padding: 0;
+}
+
+body {
+	font-size: 15px;
+	font-family: Helvetica, Arial, sans-serif;
+	background-image: url('images/stripes.png');
+	background-repeat:repeat;
+}
+
+
+#main{
+	width: 100%;
+	margin-top: 20px;
+}
+
+#container {
+	width: 100%;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+#header {
+	background-color: #f2f2f2;
+}
+
+#advertise {
+	width: 45%;
+	float: left;
+	position: relative;
+	top: 30px;xd
+	left: 120;
+	background-color: #f2f2f2;
+}
+
+#login {
+	float: right;
+	right: 120;
+	background-color: #f2f2f2;
+}
+
+input.styledButton {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 3px 0px inset, rgba(255, 255, 255, 0.0745098) 0px 1px 0px 0px;
+	background-color: rgb(250, 255, 189);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+
+	border-color: rgb(204, 204, 204);
+	border-style: solid;
+	border-width: 1px;
+
+	box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 3px 0px inset, rgba(255, 255, 255, 0.0745098) 0px 1px 0px 0px;
+	font-size: 13px;
+	height: 20px;
+	max-width: 280px;
+	padding: 4px;
+	width: 280px;
+}
