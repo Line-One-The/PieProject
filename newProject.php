@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -12,76 +11,75 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/global.css">
-		
-		<script>
-			var number = 1
-			
-			function getNumberOfUsers()
-			{
-				return number;
-			}
-			function addNewMemberLine()
-			{
-				number = number + 1;
-			
-				
-				var element= document.createElement("input");
-				
-				element.setAttribute("class", "styledButton");
-				element.setAttribute("type", "text");
-				element.setAttribute("value", "");
-				element.setAttribute("name", "member" + number);
-				
-				var foo = document.getElementById("memberList");
-				
-				foo.appendChild(element);
-				var breakLine = document.createElement("br");
-				foo.appendChild(breakLine);
-				var breakLine = document.createElement("br");
-				foo.appendChild(breakLine);
-				
-				
+                
+                <script>
+                        var number = 1
+                        
+                        
+                        function addNewMemberLine()
+                        {
+                                number = number + 1;
+                        
+                                
+                                var element= document.createElement("input");
+                                
+                                element.setAttribute("class", "styledButton");
+                                element.setAttribute("type", "text");
+                                element.setAttribute("value", "");
+                                element.setAttribute("name", "member" + number);
+                                
+                                var foo = document.getElementById("memberList");
+                                
+                                foo.appendChild(element);
+                                var breakLine = document.createElement("br");
+                                foo.appendChild(breakLine);
+                                var breakLine = document.createElement("br");
+                                foo.appendChild(breakLine);
+                                var w = document.getElementById("total");
+				w.value = number;
+                                
 
 
-			}
-		
-		</script>
-		
+                        }
+                
+                </script>
+                
     </head>
-	
+        
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-	
-		<?php
-			include "header.php";
-		?>
-	
-		<div id="main">
-		
-			<div id="container">
-				<div id="login" class="greyBack">
-					<h1>Start a new project!</h1>
-					
-					<form action="createUser.php?num="+getNumberOfUsers() method="post" id="form">
-						Project Name<br>
-						<input class="styledButton" type="text" name="name"><br><br>
-						Description<br>
-						<input class="styledButton" type="text" name="description"><br><br>
-						Members<br>
-						<div id="memberList">
-							<input class="styledButton" type="text" name="member1"><br><br>
-						</div>
-						<p><a href="Javascript: addNewMemberLine();">Add new user</a></p>
-						<input type="submit" value="submit">
-					</form>
-					
-				</div>
-			</div>
-		</div>
-		
+        
+                <?php
+                        include "header.php";
+                ?>
+        
+                <div id="main">
+                
+                        <div id="container">
+                                <div id="login" class="greyBack">
+                                        <h1>Start a new project!</h1>
+                                        
+                                        <form action="createProject.php" method="post" id="form">
+<input id="total" type="hidden" name="total" value="1">
+                                                Project Name<br>
+                                                <input class="styledButton" type="text" name="name"><br><br>
+                                                Description<br>
+                                                <input class="styledButton" type="text" name="description"><br><br>
+                                                Members<br>
+                                                <div id="memberList">
+                                                        <input class="styledButton" type="text" name="member1"><br><br>
+                                                </div>
+                                                <p><a href="Javascript: addNewMemberLine();">Add new user</a></p>
+                                                <input type="submit" value="submit">
+                                        </form>
+                                        
+                                </div>
+                        </div>
+                </div>
+                
         
     </body>
 </html>
