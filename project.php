@@ -1,4 +1,40 @@
 
+<?php 
+	session_start();
+	
+	include 'db.php';
+	$pID = $_GET['pID'];
+	
+	$result = mysqli_query($dbConnect, "SELECT name, description FROM `$projects_table` WHERE id = $pID;");
+	if(!$result) {
+		return;
+	}
+	
+	$row = mysqli_fetch_array($result);
+	if(!$row) {
+		return;
+	}
+	
+	$pName = $row['name'];
+	$pDesc = $row['description'];
+	
+	function printMilestones() {
+		include 'db.php';
+		
+		$pID = $_GET['pID'];
+		$result = mysqli_query($dbConnect, "SELECT name, description FROM `$milestones_table` WHERE p_id = $pID ORDER BY time ASC;");
+		if(!$result) {
+			return;
+		}
+		
+		while($row = mysqli_fetch_array($result)) {
+			$mName = $row['name'];
+			$mDesc = $row['description'];
+			
+			include 'Milestone.php';
+		}
+	}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -29,7 +65,10 @@
 		
 			<div id="container">
 				<div id="title" class="greyBack">
-					<h1>"$projectname"</h1>
+				<?php
+					echo "<h1>$pName</h1>";
+					echo "<p class='subtitle'>$pDesc</p>";
+				?>
 				</div>
 			
 				<div id="newProject" class="greyBack">
@@ -39,10 +78,9 @@
 				<div id="projects" class="greyBack">
 					<h1>Current Deadlines</h1>
 					
-					<table>
-						<tr><td><h2><a href="login.html">Fix the leak.</a></h2></td></tr>
-						<tr class="subtitle"><td>this is subtitle text...</td></tr>
-					</table>
+					<?php 
+						printMilestones();
+					?>
 					
 
 					
