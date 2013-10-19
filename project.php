@@ -1,3 +1,4 @@
+
 <?php 
 	session_start();
 	
@@ -34,7 +35,6 @@
 		}
 	}
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -57,15 +57,18 @@
         <![endif]-->
 
 	
-		<?php
-			include "header.php";
-		?>
+		<div id="header" class="greyBack">
+			<h1> <img src="images/ProjectPie.png" /> </h1>
+		</div>
 	
 		<div id="main">
 		
 			<div id="container">
 				<div id="title" class="greyBack">
-					<h1>"$projectname"</h1>
+				<?php
+					echo "<h1>$pName</h1>";
+					echo "<p class='subtitle'>$pDesc</p>";
+				?>
 				</div>
 			
 				<div id="newProject" class="greyBack">
@@ -75,10 +78,9 @@
 				<div id="projects" class="greyBack">
 					<h1>Current Deadlines</h1>
 					
-					<table>
-						<tr><td><h2><a href="login.html">Fix the leak.</a></h2></td></tr>
-						<tr class="subtitle"><td>this is subtitle text...</td></tr>
-					</table>
+					<?php 
+						printMilestones();
+					?>
 					
 
 					
